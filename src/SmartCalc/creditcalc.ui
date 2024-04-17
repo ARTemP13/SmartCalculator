@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CreditCalc</class>
+ <widget class="QMainWindow" name="CreditCalc">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>401</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>401</width>
+    <height>560</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>401</width>
+    <height>560</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="button_back">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>-7</y>
+      <width>51</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+   background-color: #454343;
+   border: 1px solid black;
+}
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #403e3e, stop: 1 #403e3e);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="screen">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>50</y>
+      <width>401</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>30</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    qproperty-alignment: 'AlignVCenter | AlignRight';
+    border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+background-color : white;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>-5</x>
+      <y>151</y>
+      <width>421</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+	background-color: #454343;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QTextEdit" name="sum_credit">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>10</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>23</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>80</y>
+       <width>119</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>119</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;лет;&lt;/p&gt;&lt;p&gt;месяц;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+                            border: 1px solid gray;
+                            border-radius: 3px;
+                            padding: 1px 18px 1px 3px;
+                            min-width: 6em;
+						background: #454343;
+                        }
+</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>лет</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>месяцев</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QTextEdit" name="period">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>80</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>23</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ann">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>260</y>
+       <width>151</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Аннуитетный</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>210</y>
+       <width>301</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Тип ежемесячных платежей</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="diff">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>300</y>
+       <width>181</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Дифференцированный</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Процентная ставка</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Срок кредита</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Сумма кредита</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="rate">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>150</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>23</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>20</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>₽</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>160</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>%</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>340</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+   background-color: #82c5ff;
+   color: white;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Рассчитать</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>-1</y>
+      <width>355</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+	background-color: #454343;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>291</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	color: rgb(255, 151, 57);
+}</string>
+     </property>
+     <property name="text">
+      <string>Расчет ежемесячных платежей</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../../credit1.png</file>
+        <file>../../deposit1.png</file>
+        <file>../../back.png</file>
+    </qresource>
+</RCC>
